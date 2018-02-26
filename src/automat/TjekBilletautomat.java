@@ -1,4 +1,4 @@
-package billet.automat;
+package automat;
 
 public class TjekBilletautomat
 {

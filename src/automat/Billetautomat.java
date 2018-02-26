@@ -1,4 +1,4 @@
-package billet.automat;
+package automat;
 /**
  * Model af en simpel billetautomat til enkeltbilletter med én fast pris.
  */
