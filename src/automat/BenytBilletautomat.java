@@ -43,7 +43,8 @@ public class BenytBilletautomat
 				int beløb = automat.returpenge();
 				System.out.println("Du fik "+beløb+" retur retur");
 			}
-			else if (valg==10) {
+			else if (valg==10) 
+                        {
 				System.out.print("Skriv kode: ");
 				String kode = tastatur.next();
 				automat.montørLogin(kode);
