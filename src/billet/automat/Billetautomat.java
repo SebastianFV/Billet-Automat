@@ -11,7 +11,8 @@ public class Billetautomat {
 	/**
 	 * Opret en billetautomat der sælger billetter til 10 kr.
 	 */
-	public Billetautomat() {
+	public Billetautomat() 
+        {
 		billetpris = 10;
 		balance = 0;
 		antalBilletterSolgt = 0;
@@ -20,7 +21,8 @@ public class Billetautomat {
 	/**
 	 * Giver prisen for en billet. 
 	 */
-	public int getBilletpris() {
+	public int getBilletpris() 
+        {
 		int resultat = billetpris;
 		return resultat;
 	}
@@ -28,14 +30,16 @@ public class Billetautomat {
 	/**
 	 * Modtag nogle penge (i kroner) fra en kunde.
 	 */
-	public void indsætPenge(int beløb) {
+	public void indsætPenge(int beløb) 
+        {
 		balance = balance + beløb;
 	}
 
 	/**
 	 * Giver balancen (beløbet maskinen har modtaget til den næste billet).
 	 */
-	public int getBalance() {
+	public int getBalance() 
+        {
 		return balance;
 	}
 
@@ -43,8 +47,10 @@ public class Billetautomat {
 	 * Udskriv en billet.
 	 * Opdater total og nedskriv balancen med billetprisen
 	 */
-	public void udskrivBillet() {
-		if (balance<10) {
+	public void udskrivBillet() 
+        {
+		if (balance<10) 
+                {
 			System.out.println("Du mangler at indbetale nogle penge");
 		}
 		System.out.println("##########B##T#########");
@@ -63,7 +69,8 @@ public class Billetautomat {
 	}
 
 
-	public int returpenge() {
+	public int returpenge() 
+        {
 		int returbeløb = balance;
 		balance = 0;
 		System.out.println("Du får "+returbeløb+" kr retur");
@@ -71,8 +78,10 @@ public class Billetautomat {
 	}
 
 	
-	void montørLogin(String adgangskode) {
-		if ("1234".equals(adgangskode)) {
+	void montørLogin(String adgangskode) 
+        {
+		if ("1234".equals(adgangskode)) 
+                {
 			montørtilstand = true;
 			System.out.println("Montørtilstand aktiveret");
 			System.out.println("Du kan nu angive billetpris");
@@ -83,8 +92,10 @@ public class Billetautomat {
 	}
 
 
-	public int getTotal() {
-		if (montørtilstand) {
+	public int getTotal() 
+        {
+		if (montørtilstand) 
+                {
 			return billetpris * antalBilletterSolgt;
 		} else {
 			System.out.println("Afvist - log ind først");
@@ -92,8 +103,10 @@ public class Billetautomat {
 		}
 	}
 
-	public int getAntalBilletterSolgt() {
-		if (montørtilstand) {
+	public int getAntalBilletterSolgt() 
+        {
+		if (montørtilstand) 
+                {
 			return antalBilletterSolgt;
 		} else {
 			System.out.println("Afvist - log ind først");
@@ -101,27 +114,35 @@ public class Billetautomat {
 		}
 	}
 
-	public void setBilletpris(int billetpris) {
+	public void setBilletpris(int billetpris) 
+        {
 		this.billetpris = billetpris;
 	}
 
-	public void nulstil() {
-		if (montørtilstand) {
+	public void nulstil() 
+        {
+		if (montørtilstand) 
+                {
 			antalBilletterSolgt = 0;
 		} else {
 			System.out.println("Afvist - log ind først");
 		}
 	}
 
-	public void setAntalBilletterSolgt(int antalBilletterSolgt) {
-		if (montørtilstand) {
+	public void setAntalBilletterSolgt(int antalBilletterSolgt) 
+        {
+		if (montørtilstand) 
+                {
 			this.antalBilletterSolgt = antalBilletterSolgt;
-		} else {
+		} 
+                else 
+                {
 			System.out.println("Afvist - log ind først");
 		}
 	}
 
-	public boolean erMontør() {
+	public boolean erMontør() 
+        {
 		return montørtilstand;
 	}
 }
